@@ -1,0 +1,42 @@
+{
+    "name": "magento/magento2-acceptance-tests-minimum",
+    "description": "Magento 2 Acceptance Tests Minimum",
+    "type": "magento2-acceptance-tests-component",
+    "version": "dev-master",
+    "license": [
+        "OSL-3.0",
+        "AFL-3.0"
+    ],
+    "repositories": [
+        {
+            "type" : "composer",
+            "url" : "http://pangolin.packages.org:8080/"
+        }
+    ],
+    "require": {
+        "php": "~7.0",
+        "magento/magento2-acceptance-test-framework": "dev-develop",
+        "allure-framework/allure-codeception": "dev-master",
+        "consolidation/robo": "^1.0.0",
+        "henrikbjorn/lurker": "^1.2"
+    },
+    "autoload": {
+        "psr-0": {
+            "Yandex": "vendor/allure-framework/allure-codeception/src/"
+        },
+        "psr-4": {
+            "Magento\\AcceptanceTestFramework\\": [
+                "vendor/magento/magento2-acceptance-test-framework/src/Magento/AcceptanceTestFramework"
+            ],
+            "Magento\\AcceptanceTest\\": [
+                "tests/acceptance/Magento/AcceptanceTest",
+                "generated/Magento/AcceptanceTest"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "config": {
+        "secure-http": false
+    }
+}

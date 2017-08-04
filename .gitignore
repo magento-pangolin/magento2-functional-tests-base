@@ -1,0 +1,8 @@
+.idea
+composer.phar
+vendor/*
+tests/_output/*
+tests/acceptance.suite.yml
+codeception.yml
+.env
+_generated
