@@ -1,7 +1,7 @@
 {
     "name": "magento/magento2-acceptance-tests-minimum",
     "description": "Magento 2 Acceptance Tests Minimum",
-    "type": "magento2-acceptance-tests-component",
+    "type": "magento2-test-component",
     "version": "dev-master",
     "license": [
         "OSL-3.0",
@@ -15,10 +15,15 @@
     ],
     "require": {
         "php": "~7.0",
-        "magento/magento2-acceptance-test-framework": "dev-develop",
+        "codeception/codeception": "2.2|2.3",
         "allure-framework/allure-codeception": "dev-master",
         "consolidation/robo": "^1.0.0",
-        "henrikbjorn/lurker": "^1.2"
+        "henrikbjorn/lurker": "^1.2",
+        "vlucas/phpdotenv": "~2.4",
+        "magento/magento2-acceptance-test-framework": "dev-MQE-19-Test-Framework-Packaging",
+        "magento/composer": "~1.2.0",
+        "my/magento-composer-installer": "dev-master",
+        "composer/composer": "1.4.1"
     },
     "autoload": {
         "psr-0": {
@@ -33,6 +38,38 @@
                 "generated/Magento/AcceptanceTest"
             ]
         }
+    },
+    "extra": {
+        "map": [
+            [
+                ".env.example",
+                ".env.example"
+            ],
+            [
+                "codeception.dist.yml",
+                "codeception.dist.yml"
+            ],
+            [
+                "RoboFile.php",
+                "RoboFile.php"
+            ],
+            [
+                "tests/_data",
+                "tests/_data"
+            ],
+            [
+                "tests/acceptance",
+                "tests/acceptance"
+            ],
+            [
+                "tests/_bootstrap.php",
+                "tests/_bootstrap.php"
+            ],
+            [
+                "tests/acceptance.suite.dist.yml",
+                "tests/acceptance.suite.dist.yml"
+            ]
+        ]
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
