@@ -83,7 +83,7 @@ class RoboFile extends \Robo\Tasks
 
     function generateTests()
     {
-        $this->_exec('cd vendor/magento/magento2-acceptance-test-framework/src/Magento/AcceptanceTestFramework/Util && php GenerateTestsFromObjects.php');
+        $this->_exec('cd vendor/magento/magento2-acceptance-test-framework/src/Magento/AcceptanceTestFramework/Util && php TestGenerator.php');
     }
 
     function watchSampleTest()
@@ -98,7 +98,7 @@ class RoboFile extends \Robo\Tasks
     function watchGenerator()
     {
         $this->taskWatch()
-            ->monitor('vendor/magento/magento2-acceptance-test-framework/src/Magento/AcceptanceTestFramework/Util/GenerateTestsFromObjects.php', function () {
+            ->monitor('vendor/magento/magento2-acceptance-test-framework/src/Magento/AcceptanceTestFramework/Util/TestGenerator.php', function () {
                 $this->taskExec('robo generate:tests')->run();
                 $this->say('Generator ran!');
             })->run();
