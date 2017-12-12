@@ -1,10 +1,12 @@
+# Copyright © Magento, Inc. All rights reserved.
+# See COPYING.txt for license details.
 actor: Tester
 paths:
     tests: tests
     log: tests/_output
     data: tests/_data
-    support: vendor/magento/magento2-acceptance-test-framework/src/Magento/AcceptanceTestFramework
-    envs: vendor/magento/acceptance-test-framework/etc/_envs
+    support: vendor/magento/magento2-functional-testing-framework/src/Magento/FunctionalTestingFramework
+    envs: vendor/magento/magento2-functional-testing-framework/etc/_envs
 settings:
     bootstrap: _bootstrap.php
     colors: true
@@ -20,6 +22,7 @@ extensions:
             ignoredAnnotations:
                 - env
                 - zephyrId
+                - useCaseId
 params:
     - .env
 modules:

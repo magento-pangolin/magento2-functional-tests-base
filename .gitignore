@@ -1,8 +1,7 @@
 .idea
-composer.phar
-vendor/*
-tests/_output/*
-tests/acceptance.suite.yml
-codeception.yml
 .env
-_generated
+codeception.yml
+tests/_output/*
+tests/functional.suite.yml
+tests/functional/Magento/FunctionalTest/_generated
+vendor/*

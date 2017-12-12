@@ -1,138 +1,64 @@
-# Welcome to the example of Codeception + Robo + Allure!
+# Magento Functional Testing Framework
 
-### Prerequisites
-* **Codeception**, **Allure** and **Robo** are PHP based applications installed via **Composer**, so you will need to have **Composer** installed in order to run the following. Please visit the [Composer](https://getcomposer.org/) homepage for installation instructions.
-* Some settings need to be adjusted to meet the build environment settings in the appropriate `XXX.suite.yml` file in the `[PROJECT_ROOT]/tests/` directory: `[PROJECT_ROOT]/tests/XXXXXXX.suite.yml`
+----
 
-### Installation
-* Open a Terminal Window. CD to the Project Directory. Run the following command to install the project dependencies:
-    ```
-    cd [LOCATION_OF_GITHUB_REPO]
-    composer install
-    ```
+## System Requirements
+[Magento Functional Testing Framework system requirements](http://devdocs.magento.com/guides/v2.2/magento-functional-testing-framework/getting-started.html#prepare-environment)
 
-### Configuration
-* In order to adjust the settings for the Framework you will need to copy the `.dist.` settings files and make your adjustments based on your unique Setup. These files are listed in the `.gitignore` file so they will only effect your Setup. You can run the following Robo command to copy the necassary files or follow the [Optional] instructions listed below.
-    ```
-    robo clone:files
-    ```
+## Installation
+To install the Magento Functional Testing Framework, see [Getting Started](http://devdocs.magento.com/guides/v2.2/magento-functional-testing-framework/getting-started.html)
 
-* Configure the following `.env` variables according to the Magento application being tested.
-    ```
-    MAGENTO_BASE_URL=http://magento.loc/index.php
-    
-    MAGENTO_BACKEND_NAME=admin
-    MAGENTO_ADMIN_USERNAME=admin
-    MAGENTO_ADMIN_PASSWORD=123123q
-    
-    DB_DSN=''
-    DB_USERNAME=''
-    DB_PASSWORD=''
-    ```
+## Contributing
+Contributions can take the form of new components or features, changes to existing features, tests, documentation (such as developer guides, user guides, examples, or specifications), bug fixes, optimizations, or just good suggestions.
 
-    * **[Optional]** Create .env file by copying existing .env.example file at project root directory.
+To learn about how to make a contribution, click [here][1].
 
-        ```
-        cp .env.example .env
-        ```
+To open an issue, click [here][2].
 
-    * **[Optional]** If you wish to customize entire test suite locally, you can create codeception.yml by copying existing codeception.dist.yml, and make change in codeception.yml.
-        ```
-        cp codeception.dist.yml codeception.yml
-        ```
+To suggest documentation improvements, click [here][3].
 
-    * **[Optional]** If you wish to customize acceptance test suite locally, you can create acceptance.suite.yml by copying existing acceptance.suite.dist.yml, and make change in acceptance.suite.yml.
-        ```
-        cp acceptance.suite.dist.yml acceptance.suite.yml
-        ```
+[1]: <http://devdocs.magento.com/guides/v2.2/magento-functional-testing-framework/contribution-guidelines.html>
+[2]: <https://github.com/magento/magento2-functional-testing-framework/issues>
+[3]: <http://devdocs.magento.com>
 
-### Running the Tests
-* Build the project:
-    ```
-    vendor/bin/codecept build
-    ```
-* Generate page objects:
-    ```
-    vendor/bin/robo generate:page-objects
-    ```
-    Page objects will be generated in **generated** folder under project root.
-    
-* **You will need to install Allure's CLI tool to generate the reports, please visit this page for instructions**: http://wiki.qatools.ru/display/AL/Allure+Commandline.
+### Labels applied by the MFTF team
 
-* Next you will need to start a Selenium server so we can run the tests (This will vary based on your local setup).
+Refer to the tables with descriptions of each label below. These labels are applied by the MFTF development team to community contributed issues and pull requests, to communicate status, impact, or which team is working on it.
 
-* Then open a New Terminal Window.
+### Pull Request Status
 
-* Kick off the entire E2E Test Suite run the following command:
+Label| Description
+---|---
+**accept**| The pull request has been accepted and will be merged into mainline code. 
+**reject**| The pull request has been rejected and will not be merged into mainline code. Possible reasons can include but are not limited to: issue has already been fixed in another code contribution, or there is an issue with the code contribution.
+**needsUpdate**| The Magento Team needs additional information from the reporter to properly prioritize and process the pull request.
 
-    ```
-    robo test
-    ```
+### Issue Resolution Status
 
-* To kick off some example tests with 2 test cases run the following command:
+Label| Description
+---|---
+**acknowledged**| The Magento Team has validated the issue and an internal ticket has been created.
+**needsUpdate**| The Magento Team needs additional information from the reporter to properly prioritize and process the issue or pull request.
+**cannot reproduce**| The Magento Team has not confirmed that this issue contains the minimum required information to reproduce. 
+**non-issue**| The Magento Team has not recognised any issue according to provided information.
 
-    ```
-    robo example
-    ```
+### Domains Impacted
 
-### Testing using Robo
+Label| Description
+---|---
+**PROD**| Affects the Product team (mostly feature requests or business logic change).
+**DOC**| Affects Documentation domain.
+**TECH**| Affects Architect Group (mostly to make decisions around technology changes).
 
-* You can run the following test suites using robo:
+### Type
 
-  * Run the tests marked with **@group chrome**:  `robo chrome`
-  * Run the tests marked with **@group firefox**:  `robo chrome`
-  * Run the tests marked with **@group phantomjs**:  `robo phantomjs`
+Label| Description
+---|---
+**bugfix**| The issue or pull request relates to bug fixing.
+**enhancement**| The issue or pull request that raises the MFTF to a higher degree (for example new features, optimization, refactoring, etc).
 
-### Allure + Robo
-* You can generate an Allure report, open an Allure report or both using robo:
-  * Generate a report from **[PROJECT_ROOT]/tests/_output/allure-results/**: `robo allure:generate`
-  * Open a generate report from **[PROJECT_ROOT]/tests/_output/allure-report**: `robo allure:open`
-  * Generate a report and open it: `robo allure:report`
+## License
 
-### Testing Environments
-* You can run a subset of Tests by editing a command in the file `RoboFile.php` or by running `codecept` directly:
+Each Magento source file included in this distribution is licensed under APL 3.0
 
-    ```codecept run --env chrome```
-
-    ```codecept run --env firefox```
-
-    ```codecept run --env phantomjs```
-
-    ```codecept run --env chrome --group slow```
-
-### Testing Groups
-* You can run or exclude subsets of Tests using the `--group` and `--skip-group` codeception flags in the Terminal (IF you add the `@env` tag to a Test you HAVE to include the `--env ZZZZ` flag in your `codecept` command):
-    * ```codecept run acceptance --env ZZZZ --group XXXX --skip-group YYYY```
-    ##### Base on operation, currently we have groups:
-        * *skip*
-        * *slow*
-        * *example*
-        * *sample*
-        * *admin-direct-access*
-        * *nav-menu-access*
-        * *sampleData*
-        * *nav-menu*
-        * *add*
-        * *update* 
-        * *fields*
-    ##### Base on Magento module, currently we have groups:
-        * *catalog*
-        * *configurable*
-        * *customer*
-        * *sales*
-        * *orders*
-
-### RoboFile.php
-
-* Edit the following command to change the Tests that the command `robo test` executes:
-
-    ```
-    $this->_exec('codecept run --env chrome');
-    ```
-
-### TROUBLESHOOTING
-* TimeZone Error - http://stackoverflow.com/questions/18768276/codeception-datetime-error
-* TimeZone List - http://php.net/manual/en/timezones.america.php
-* System PATH - Make sure you have `vendor/bin/` and `vendor/` listed in your system path so you can run the  `codecept` and `robo` commands directly:
-
-    `sudo nano /etc/private/paths`
+Please see LICENSE_APL3.txt for the full text of the APL 3.0 license or contact license@magentocommerce.com for a copy.
