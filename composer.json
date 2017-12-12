@@ -1,6 +1,6 @@
 {
-    "name": "magento/magento2-acceptance-tests-minimum",
-    "description": "Magento 2 Acceptance Tests Minimum",
+    "name": "magento/magento2-functional-tests-base",
+    "description": "Magento 2 Functional Tests Base",
     "type": "magento2-test-component",
     "version": "dev-master",
     "license": [
