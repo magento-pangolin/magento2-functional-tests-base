@@ -38,47 +38,51 @@
         "map": [
             [
                 ".gitignore",
-                ".gitignore"
+                "dev/tests/acceptance/.gitignore"
             ],
             [
                 ".env.example",
-                ".env.example"
+                "dev/tests/acceptance/.env.example"
             ],
             [
                 "codeception.dist.yml",
-                "codeception.dist.yml"
+                "dev/tests/acceptance/codeception.dist.yml"
             ],
             [
                 "LICENSE.txt",
-                "LICENSE.txt"
+                "dev/tests/acceptance/LICENSE.txt"
             ],
             [
                 "LICENSE_AFL.txt",
-                "LICENSE_AFL.txt"
+                "dev/tests/acceptance/LICENSE_AFL.txt"
             ],
             [
                 "pre-install.php",
-                "pre-install.php"
+                "dev/tests/acceptance/pre-install.php"
             ],
             [
                 "RoboFile.php",
-                "RoboFile.php"
+                "dev/tests/acceptance/RoboFile.php"
             ],
             [
                 "tests/_data",
-                "tests/_data"
+                "dev/tests/acceptance/tests/_data"
             ],
             [
-                "tests/functional",
-                "tests/functional"
-            ],
-            [
-                "tests/_bootstrap.php",
-                "tests/_bootstrap.php"
+                "tests/_suite/sampleSuite.xml",
+                "dev/tests/acceptance/tests/_suite/sampleSuite.xml"
             ],
             [
                 "tests/functional.suite.dist.yml",
-                "tests/functional.suite.dist.yml"
+                "dev/tests/acceptance/tests/functional.suite.dist.yml"
+            ],
+            [
+                "tests/_bootstrap.php",
+                "dev/tests/acceptance/tests/_bootstrap.php"
+            ],
+            [
+                "tests/functional/_bootstrap.php",
+                "dev/tests/acceptance/tests/functional/_bootstrap.php"
             ]
         ]
     },
