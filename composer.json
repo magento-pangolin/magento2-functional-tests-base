@@ -2,45 +2,40 @@
     "name": "magento/magento2-acceptance-tests-minimum",
     "description": "Magento 2 Acceptance Tests Minimum",
     "type": "magento2-test-component",
-    "version": "dev-master",
     "license": [
         "OSL-3.0",
         "AFL-3.0"
     ],
     "repositories": [
         {
-            "type" : "composer",
-            "url" : "http://pangolin.packages.org:8080/"
+            "type": "git",
+            "url": "git@github.com:magento/magento2-functional-testing-framework.git"
         }
     ],
     "require": {
-        "php": "~7.0",
-        "codeception/codeception": "2.2|2.3",
-        "allure-framework/allure-codeception": "dev-master",
+        "allure-framework/allure-codeception": "dev-master#af40af5ae2b717618a42fe3e137d75878508c75d",
+        "codeception/codeception": "~2.3.4",
         "consolidation/robo": "^1.0.0",
+        "symfony/process": ">=2.7 <3.4",
         "henrikbjorn/lurker": "^1.2",
+        "magento/magento2-functional-test-framework": "1.0.0",
+        "php": "7.0.2|7.0.4|~7.0.6|~7.1.0",
         "vlucas/phpdotenv": "~2.4",
-        "magento/magento2-acceptance-test-framework": "dev-MQE-19-Test-Framework-Packaging",
         "magento/composer": "~1.2.0",
         "my/magento-composer-installer": "dev-master",
         "composer/composer": "1.4.1"
     },
     "autoload": {
-        "psr-0": {
-            "Yandex": "vendor/allure-framework/allure-codeception/src/"
-        },
         "psr-4": {
-            "Magento\\AcceptanceTestFramework\\": [
-                "vendor/magento/magento2-acceptance-test-framework/src/Magento/AcceptanceTestFramework"
-            ],
-            "Magento\\AcceptanceTest\\": [
-                "tests/acceptance/Magento/AcceptanceTest",
-                "generated/Magento/AcceptanceTest"
-            ]
+            "Magento\\": "tests/functional/Magento"
         }
     },
     "extra": {
         "map": [
+            [
+                ".gitignore",
+                ".gitignore"
+            ],
             [
                 ".env.example",
                 ".env.example"
@@ -48,6 +43,18 @@
             [
                 "codeception.dist.yml",
                 "codeception.dist.yml"
+            ],
+            [
+                "LICENSE.txt",
+                "LICENSE.txt"
+            ],
+            [
+                "LICENSE_AFL.txt",
+                "LICENSE_AFL.txt"
+            ],
+            [
+                "pre-install.php",
+                "pre-install.php"
             ],
             [
                 "RoboFile.php",
@@ -58,22 +65,23 @@
                 "tests/_data"
             ],
             [
-                "tests/acceptance",
-                "tests/acceptance"
+                "tests/functional",
+                "tests/functional"
             ],
             [
                 "tests/_bootstrap.php",
                 "tests/_bootstrap.php"
             ],
             [
-                "tests/acceptance.suite.dist.yml",
-                "tests/acceptance.suite.dist.yml"
+                "tests/functional.suite.dist.yml",
+                "tests/functional.suite.dist.yml"
             ]
         ]
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
     "config": {
-        "secure-http": false
+        "secure-http": false,
+        "sort-packages": true
     }
 }
