@@ -6,6 +6,9 @@
         "OSL-3.0",
         "AFL-3.0"
     ],
+    "config": {
+        "secure-http": false
+    },
     "repositories": [
         {
             "type" : "composer",
@@ -79,8 +82,5 @@
         ]
     },
     "minimum-stability": "dev",
-    "prefer-stable": true,
-    "config": {
-        "secure-http": false
-    }
+    "prefer-stable": true
 }
