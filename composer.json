@@ -1,7 +1,7 @@
 {
     "name": "magento/magento2-functional-tests-base",
     "description": "Magento 2 Functional Tests Base",
-    "type": "magento2-test-component",
+    "type": "project",
     "version": "dev-master",
     "license": [
         "OSL-3.0",
@@ -24,23 +24,12 @@
         "henrikbjorn/lurker": "^1.2",
         "magento/magento2-functional-testing-framework": "1.0.0",
         "php": "7.0.2|7.0.4|~7.0.6|~7.1.0",
-        "vlucas/phpdotenv": "~2.4",
-        "magento/composer": "~1.2.0",
-        "my/magento-composer-installer": "dev-master",
-        "composer/composer": "1.4.1"
+        "vlucas/phpdotenv": "~2.4"
     },
     "autoload": {
         "psr-4": {
             "Magento\\": "tests/functional/Magento"
         }
-    },
-    "extra": {
-        "map": [
-            [
-                "*",
-                "dev/tests/acceptance"
-            ]
-        ]
     },
     "minimum-stability": "dev",
     "prefer-stable": true
