@@ -45,7 +45,7 @@ class RoboFile extends \Robo\Tasks
      */
     function generateTests($opts = ['config' => null])
     {
-        require 'tests'. DIRECTORY_SEPARATOR . 'functional' . DIRECTORY_SEPARATOR . '_bootstrap.php';
+        require 'tests' . DIRECTORY_SEPARATOR . 'functional' . DIRECTORY_SEPARATOR . '_bootstrap.php';
         \Magento\FunctionalTestingFramework\Util\TestGenerator::getInstance()->createAllCestFiles($opts['config']);
         $this->say("Generate Tests Command Run");
     }
@@ -63,7 +63,7 @@ class RoboFile extends \Robo\Tasks
             throw new Exception("Please provide suite name(s) after generate:suite command");
         }
 
-        require 'tests'. DIRECTORY_SEPARATOR . 'functional' . DIRECTORY_SEPARATOR . '_bootstrap.php';
+        require 'tests' . DIRECTORY_SEPARATOR . 'functional' . DIRECTORY_SEPARATOR . '_bootstrap.php';
         $sg = \Magento\FunctionalTestingFramework\Suite\SuiteGenerator::getInstance();
 
         foreach ($args as $arg) {
