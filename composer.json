@@ -8,8 +8,8 @@
     ],
     "repositories": [
         {
-            "type": "git",
-            "url": "git@github.com:magento/magento2-functional-testing-framework.git"
+            "type" : "composer",
+            "url" : "http://localhost:8080/"
         }
     ],
     "require": {
