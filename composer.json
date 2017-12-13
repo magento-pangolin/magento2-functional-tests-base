@@ -1,7 +1,7 @@
 {
     "name": "magento/magento2-functional-tests-base",
     "description": "Magento 2 Functional Tests Base",
-    "type": "magento2-component",
+    "type": "magento2-test-component",
     "version": "dev-master",
     "license": [
         "OSL-3.0",
