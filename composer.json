@@ -10,12 +10,6 @@
     "config": {
         "secure-http": false
     },
-    "repositories": [
-        {
-            "type" : "composer",
-            "url" : "http://localhost:8080/"
-        }
-    ],
     "require": {
         "allure-framework/allure-codeception": "dev-master#af40af5ae2b717618a42fe3e137d75878508c75d",
         "codeception/codeception": "~2.3.4",
@@ -28,11 +22,6 @@
         "magento/composer": "~1.2.0",
         "my/magento-composer-installer": "dev-master",
         "composer/composer": "1.4.1"
-    },
-    "autoload": {
-        "psr-4": {
-            "Magento\\": "tests/functional/Magento"
-        }
     },
     "extra": {
         "map": [
