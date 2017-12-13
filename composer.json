@@ -38,51 +38,51 @@
         "map": [
             [
                 ".gitignore",
-                "dev/tests/acceptance/.gitignore"
+                ".gitignore"
             ],
             [
                 ".env.example",
-                "dev/tests/acceptance/.env.example"
+                ".env.example"
             ],
             [
                 "codeception.dist.yml",
-                "dev/tests/acceptance/codeception.dist.yml"
+                "codeception.dist.yml"
             ],
             [
                 "LICENSE.txt",
-                "dev/tests/acceptance/LICENSE.txt"
+                "LICENSE.txt"
             ],
             [
                 "LICENSE_AFL.txt",
-                "dev/tests/acceptance/LICENSE_AFL.txt"
+                "LICENSE_AFL.txt"
             ],
             [
                 "pre-install.php",
-                "dev/tests/acceptance/pre-install.php"
+                "pre-install.php"
             ],
             [
                 "RoboFile.php",
-                "dev/tests/acceptance/RoboFile.php"
+                "RoboFile.php"
             ],
             [
                 "tests/_data",
-                "dev/tests/acceptance/tests/_data"
+                "tests/_data"
             ],
             [
                 "tests/_suite/sampleSuite.xml",
-                "dev/tests/acceptance/tests/_suite/sampleSuite.xml"
+                "tests/_suite/sampleSuite.xml"
             ],
             [
                 "tests/functional.suite.dist.yml",
-                "dev/tests/acceptance/tests/functional.suite.dist.yml"
+                "tests/functional.suite.dist.yml"
             ],
             [
                 "tests/_bootstrap.php",
-                "dev/tests/acceptance/tests/_bootstrap.php"
+                "tests/_bootstrap.php"
             ],
             [
                 "tests/functional/_bootstrap.php",
-                "dev/tests/acceptance/tests/functional/_bootstrap.php"
+                "tests/functional/_bootstrap.php"
             ]
         ]
     },
