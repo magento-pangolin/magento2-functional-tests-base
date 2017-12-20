@@ -20,7 +20,7 @@
         "php": "7.0.2|7.0.4|~7.0.6|~7.1.0",
         "vlucas/phpdotenv": "~2.4",
         "magento/composer": "~1.2.0",
-        "my/magento-composer-installer": "dev-master",
+        "magento/magento-composer-installer": "dev-MQE-604",
         "composer/composer": "1.4.1"
     },
     "extra": {
